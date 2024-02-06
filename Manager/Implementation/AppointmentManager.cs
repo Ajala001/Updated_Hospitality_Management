@@ -22,6 +22,7 @@ class AppointmentManager : IAppointmentManager
         foreach (var doctor in availableDoctors)
         {
             Console.WriteLine($"Name: {doctor.FirstName} {doctor.LastName}\nDepartment: {doctor.DoctorFieldOfSpecialization}\nID: {doctor.DoctorID}\nStatus: {doctor.DoctorStatus}");
+            Console.WriteLine();
         }
 
         Console.Write("Enter the Doctor ID: ");

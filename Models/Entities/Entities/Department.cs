@@ -18,8 +18,8 @@ class Department
         ClosingHours = closingHours;
     }
 
-    public void AddDoctor(Doctor doctor)
+    public void AddDoctor(Doctor docItem)
     {
-        DoctorsWithinTheDept.Add(doctor);
+        DoctorsWithinTheDept.Add(docItem);
     }
 }

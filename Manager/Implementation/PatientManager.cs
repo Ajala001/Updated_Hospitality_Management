@@ -6,17 +6,9 @@ class PatientManager : IPatientManager
 
     public void AddPatient(Patient patient)
     {
-        if (!IsPatientInList(patient))
-        {
-            patients.Add(patient);
-            Console.WriteLine("Rgistered successfully.");
-            DisplayPatientID(patient.Gmail);
-        }
-        else
-        {
-            Console.WriteLine($"Patient with email {patient.Gmail} already exists.");
-            return;
-        }
+        patients.Add(patient);
+        Console.WriteLine("Rgistered successfully.");
+        DisplayPatientID(patient.Gmail);
     }
 
     static bool IsPatientInList(Patient patient)

@@ -31,9 +31,20 @@ class AdminManager : IAdminManager
         Console.Write("Enter Doctor's Year Of Experience: ");
         int doctorYearOfExperience = int.Parse(Console.ReadLine());
 
+        var listOfDoctors = DoctorManager.ListOfDoctors();
+        var validate = listOfDoctors.FirstOrDefault(doctor => doctor.Gmail == email);
 
-        Doctor doctor = new Doctor(firstName, lastName, email, phoneNumber, gender, password, doctorFieldOfSpecialization, doctorYearOfExperience);
-        doctorManager.AddDoctor(doctor);
+        if (validate == null)
+        {
+            Doctor doctor = new Doctor(firstName, lastName, email, phoneNumber, gender, password, doctorFieldOfSpecialization, doctorYearOfExperience);
+            doctorManager.AddDoctor(doctor);
+        }
+        else
+        {
+            Console.WriteLine($"Doctor with email {email} already exists.");
+            return;
+        }
+
     }
 
     public void RemoveDoctor()
@@ -82,7 +93,7 @@ class AdminManager : IAdminManager
         }
         else
         {
-            Console.WriteLine("Doctor List Empty!!!");
+            Console.WriteLine("Doctor Don't Exist!!!");
         }
         return null;
     }
@@ -301,7 +312,7 @@ class AdminManager : IAdminManager
             }
         }
     }
-    
+
 
     public void GetListOfDocInADept()
     {

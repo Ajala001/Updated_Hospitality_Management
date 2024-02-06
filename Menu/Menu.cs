@@ -71,13 +71,22 @@ class Menu
             Console.Write("Choose A Password: ");
             string password = Console.ReadLine();
 
-            Patient patient = new Patient(firstName, lastName, email, phoneNumber, gender, DateTime.Now.Year - dateOfBirth, password);
-            patientManager.AddPatient(patient);
+            var listOfDPatients = PatientManager.ListOfPatients();
+            var validate = listOfDPatients.FirstOrDefault(patient => patient.Gmail == email);
 
+            if (validate == null)
+            {
+                Patient patient = new Patient(firstName, lastName, email, phoneNumber, gender, DateTime.Now.Year - dateOfBirth, password);
+                patientManager.AddPatient(patient);
+            }
+            else
+            {
+                Console.WriteLine($"Patient with email {email} already exists.");
+                return;
+            }
             isRegistering = false;
         }
     }
-
     public void Login()
     {
         bool isContinue = true;

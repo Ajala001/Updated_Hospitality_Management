@@ -18,6 +18,5 @@ class Patient : BaseClass
         BookAppointment = false;
         PatientID = "Pat" + (patientCount + 1);
         patientCount++;
-        PatientFile = "Empty";
     }
 }

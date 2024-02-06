@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Manager",
+    "\\Manager\\Implementation",
+    "\\Menu",
+    "\\Models",
+    "\\Models\\Entities",
+    "\\Models\\Entities\\Entities"
   ],
-  "SelectedNode": "\\PatientManager.cs",
+  "SelectedNode": "\\Menu\\Menu.cs",
   "PreviewInSolutionExplorer": false
 }

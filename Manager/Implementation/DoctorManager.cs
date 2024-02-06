@@ -6,17 +6,9 @@ class DoctorManager : IDoctorManager
 
     public void AddDoctor(Doctor doctor)
     {
-        if (!IsDoctorInList(doctor))
-        {
-            doctors.Add(doctor);
-            Console.WriteLine("Doctor Added successfully.");
-            DisplayDoctorID(doctor.Gmail);
-        }
-        else
-        {
-            Console.WriteLine($"Doctor with email {doctor.Gmail} already exists.");
-            return;
-        }
+        doctors.Add(doctor);
+        Console.WriteLine("Doctor Added successfully.");
+        DisplayDoctorID(doctor.Gmail);
     }
 
     static bool IsDoctorInList(Doctor doctor)
@@ -197,7 +189,13 @@ class DoctorManager : IDoctorManager
         Console.Write("Enter Your Id: ");
         string docId = Console.ReadLine();
 
-        var doctor = GetDoctorByID(docId);
+        if (docId != Doctor.LoggedInDoctor)
+        {
+            Console.WriteLine("Invalid Registration ID!!!");
+            return;
+        }
+
+        var doctor = GetDoctorByID(Doctor.LoggedInDoctor);
         var listOfDepartment = DepartmentManager.ListOfDepartment();
         var dept = listOfDepartment.Find(dept => dept.DepartmentName == doctor.DoctorFieldOfSpecialization);
 
@@ -207,6 +205,7 @@ class DoctorManager : IDoctorManager
             foreach (var doctorItem in dept.DoctorsWithinTheDept)
             {
                 Console.WriteLine($"Name: {doctor.FirstName} {doctor.LastName}\nSpecialization: {doctor.DoctorFieldOfSpecialization}\nDoctor Status: {doctor.DoctorStatus}\nDoc ID: {doctor.DoctorID}");
+                Console.WriteLine();
             }
         }
         else
