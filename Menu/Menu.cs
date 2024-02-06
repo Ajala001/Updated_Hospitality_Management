@@ -10,9 +10,12 @@ class Menu
     public void MainMenu()
     {
         bool isContinue = true;
-        Console.WriteLine("Your're Welcome To HMS");
+        Console.WriteLine("============= YOU'RE WELCOME TO HMS ===============");
+        PressEnterToContinue();
         while (isContinue)
         {
+            Console.WriteLine();
+            Console.WriteLine("============= MAIN MENU ================");
             foreach (var option in Enum.GetValues(typeof(UserOptions)))
             {
                 System.Console.WriteLine($"Enter {(int)option} to {option}");
@@ -45,6 +48,8 @@ class Menu
         bool isRegistering = true;
         while (isRegistering)
         {
+            Console.WriteLine();
+            Console.WriteLine("============= FILL IN THE FOLLOWING DETAILS ================");
             Console.Write("Enter Your First Name: ");
             string firstName = Console.ReadLine();
 
@@ -123,6 +128,7 @@ class Menu
 
     public void SubmitCredentials()
     {
+        Console.WriteLine("============= FILL IN THE FOLLOWING DETAILS ================");
         Console.Write("Enter Your First Name: ");
         string firstName = Console.ReadLine();
 
@@ -169,6 +175,8 @@ class Menu
         bool isContinue = true;
         while (isContinue)
         {
+            Console.WriteLine();
+            Console.WriteLine("============= WELCOME TO ADMIN MENU ================");
             foreach (var item in Enum.GetValues(typeof(AdminRoles)))
             {
                 Console.Write($"Enter {(int)item} To {item}\n");
@@ -241,6 +249,8 @@ class Menu
         bool isContinue = true;
         while (isContinue)
         {
+            Console.WriteLine();
+            Console.WriteLine("============= WELCOME TO DOCTOR MENU ================");
             foreach (var item in Enum.GetValues(typeof(DoctorRoles)))
             {
                 Console.Write($"Enter {(int)item} To {item}:\n");
@@ -273,6 +283,8 @@ class Menu
         bool isContinue = true;
         while (isContinue)
         {
+            Console.WriteLine();
+            Console.WriteLine("============= WELCOME TO PATIENT MENU ================");
             foreach (var item in Enum.GetValues(typeof(PatientRoles)))
             {
                 Console.Write($"Enter {(int)item} To {item}\n");
@@ -298,7 +310,7 @@ class Menu
 
     public static void PressEnterToContinue()
     {
-        Console.Write("Press Enter to Continue:");
+        Console.Write("Press Enter to Continue");
         Console.ReadKey();
         Console.WriteLine();
         Console.WriteLine();
