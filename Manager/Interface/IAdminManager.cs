@@ -1,6 +1,5 @@
 interface IAdminManager
 {
-    public void PrintUser();
     public void AddDoctor();
     public void RemoveDoctor();
     public string ViewDoctorDetails();

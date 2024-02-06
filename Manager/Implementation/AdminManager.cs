@@ -5,6 +5,8 @@ class AdminManager : IAdminManager
 
     public void AddDoctor()
     {
+        Console.WriteLine();
+        Console.WriteLine("=========== FILL IN THE FOLLOWING DETAILS ============");
         Console.Write("Enter Your First Name: ");
         string firstName = Console.ReadLine();
 
@@ -109,13 +111,6 @@ class AdminManager : IAdminManager
             Console.WriteLine("Patient List Empty!!!");
         }
         return null;
-    }
-
-
-
-    public void PrintUser()
-    {
-        throw new NotImplementedException();
     }
 
     public void GetAllDoctors()
@@ -251,6 +246,8 @@ class AdminManager : IAdminManager
 
     public void AddDepartment()
     {
+        Console.WriteLine();
+        Console.WriteLine("=========== FILL IN THE FOLLOWING DETAILS ============");
         Console.Write("Enter The Name Of The Department: ");
         string deptName = Console.ReadLine();
 
@@ -304,7 +301,7 @@ class AdminManager : IAdminManager
             }
         }
     }
-
+    
 
     public void GetListOfDocInADept()
     {
