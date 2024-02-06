@@ -216,9 +216,11 @@ class AdminManager : IAdminManager
         if (userID == "001" && userPassword == "admin")
         {
             Console.WriteLine("You've Successfully Login!!!");
+            Console.WriteLine();
             return true;
         }
         Console.WriteLine("Invalid Credentials");
+        Console.WriteLine();
         return false;
     }
 

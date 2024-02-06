@@ -251,12 +251,15 @@ class Menu
             {
                 case 1:
                     doctorManager.ViewAppointment();
+                    PressEnterToContinue();
                     break;
                 case 2:
                     doctorManager.ViewDoctorWithinUrDept();
+                    PressEnterToContinue();
                     break;
                 case 3:
                     doctorManager.ViewListOfDocInOtherDept();
+                    PressEnterToContinue();
                     break;
                 case 4:
                     isContinue = false;
@@ -280,9 +283,11 @@ class Menu
             {
                 case 1:
                     appointmentManager.BookAppointment();
+                    PressEnterToContinue();
                     break;
                 case 2:
                     patientManager.CheckDoctorStatus();
+                    PressEnterToContinue();
                     break;
                 case 3:
                     isContinue = false;
@@ -295,6 +300,8 @@ class Menu
     {
         Console.Write("Press Enter to Continue:");
         Console.ReadKey();
+        Console.WriteLine();
+        Console.WriteLine();
         Console.WriteLine();
     }
 }

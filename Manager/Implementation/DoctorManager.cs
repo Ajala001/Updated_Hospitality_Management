@@ -54,6 +54,7 @@ class DoctorManager : IDoctorManager
         if (!IsDoctorInList(doctor))
         {
             Console.WriteLine("Your Details Dont't Exist on Our System!!!");
+            Console.WriteLine();
             return false;
         }
         else
@@ -61,11 +62,13 @@ class DoctorManager : IDoctorManager
             if (doctor.DoctorID == doctorID && doctor.Password == doctorPass)
             {
                 Console.WriteLine("Login Successful.");
+                Console.WriteLine();
                 return true;
             }
             else
             {
                 Console.WriteLine("Invalid Credentials!!!");
+                Console.WriteLine();
                 return false;
             }
         }
