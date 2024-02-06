@@ -50,17 +50,4 @@ class DepartmentManager : IDepartmentManager
         }
         return departments;
     }
-
-
-
-
-
-
-
-
-
-    public List<Doctor> GetAllDoctorsInADept()
-    {
-        throw new NotImplementedException();
-    }
 }

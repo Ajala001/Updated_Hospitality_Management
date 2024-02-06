@@ -28,6 +28,9 @@ class Menu
                     Login();
                     break;
                 case 3:
+                    SubmitCredentials();
+                    break;
+                case 4:
                     Environment.Exit(0);
                     break;
                 default:
@@ -117,6 +120,49 @@ class Menu
             isContinue = false;
         }
     }
+
+    public void SubmitCredentials()
+    {
+        Console.Write("Enter Your First Name: ");
+        string firstName = Console.ReadLine();
+
+        Console.Write("Enter Your Last Name: ");
+        string lastName = Console.ReadLine();
+
+        Console.Write("Enter Your Gmail: ");
+        string email = Console.ReadLine();
+
+        Console.Write("Enter Your Phone Number: ");
+        string phoneNumber = Console.ReadLine();
+
+        Console.Write("Enter Your Gender:\nEnter 1 for Male:\nEnter 2 for Female:");
+        int gender = int.Parse(Console.ReadLine());
+
+        Console.Write("Enter Doctor's Field Of Specialization: ");
+        string doctorFieldOfSpecialization = Console.ReadLine();
+
+        Console.Write("Enter Doctor's Year Of Experience: ");
+        int doctorYearOfExperience = int.Parse(Console.ReadLine());
+
+        var listOfDepartment = DepartmentManager.ListOfDepartment();
+        bool found = false;
+
+        foreach (var DeptItem in listOfDepartment)
+        {
+            if (DeptItem.DepartmentName == doctorFieldOfSpecialization)
+            {
+                Console.WriteLine("Credentials Submitted Successfully!!!");
+                found = true;
+                break;
+            }
+        }
+
+        if (!found)
+        {
+            Console.WriteLine("Credentials Under Check\nWe would get back to you!!!");
+        }
+    }
+
 
     public void AdminMenu()
     {

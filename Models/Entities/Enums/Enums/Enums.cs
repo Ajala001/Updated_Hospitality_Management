@@ -4,6 +4,7 @@ namespace enums
     {
         Register = 1,
         Login,
+        Submit_Credentials,
         Exit
     }
 

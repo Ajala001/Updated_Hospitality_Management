@@ -26,7 +26,11 @@ class AdminManager : IAdminManager
         Console.Write("Enter Doctor's Fieild Of Specialization: ");
         string doctorFieldOfSpecialization = Console.ReadLine();
 
-        Doctor doctor = new Doctor(firstName, lastName, email, phoneNumber, gender, password, doctorFieldOfSpecialization);
+        Console.Write("Enter Doctor's Year Of Experience: ");
+        int doctorYearOfExperience = int.Parse(Console.ReadLine());
+
+
+        Doctor doctor = new Doctor(firstName, lastName, email, phoneNumber, gender, password, doctorFieldOfSpecialization, doctorYearOfExperience);
         doctorManager.AddDoctor(doctor);
     }
 
@@ -321,7 +325,4 @@ class AdminManager : IAdminManager
             Console.WriteLine($"Department '{deptName}' not found.");
         }
     }
-
-
-
 }

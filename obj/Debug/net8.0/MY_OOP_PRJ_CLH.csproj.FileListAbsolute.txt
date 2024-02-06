@@ -12,3 +12,4 @@ C:\Users\THINKPAD_PC\Desktop\MY_OOP_PRJ_CLH\obj\Debug\net8.0\refint\MY_OOP_PRJ_C
 C:\Users\THINKPAD_PC\Desktop\MY_OOP_PRJ_CLH\obj\Debug\net8.0\MY_OOP_PRJ_CLH.pdb
 C:\Users\THINKPAD_PC\Desktop\MY_OOP_PRJ_CLH\obj\Debug\net8.0\MY_OOP_PRJ_CLH.genruntimeconfig.cache
 C:\Users\THINKPAD_PC\Desktop\MY_OOP_PRJ_CLH\obj\Debug\net8.0\ref\MY_OOP_PRJ_CLH.dll
+C:\Users\THINKPAD_PC\Desktop\MY_OOP_PRJ_CLH\obj\Debug\net8.0\MY_OOP_PRJ_CLH.sourcelink.json
