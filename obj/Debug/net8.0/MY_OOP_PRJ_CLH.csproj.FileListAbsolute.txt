@@ -1,0 +1,14 @@
+C:\Users\THINKPAD_PC\Desktop\MY_OOP_PRJ_CLH\bin\Debug\net8.0\MY_OOP_PRJ_CLH.exe
+C:\Users\THINKPAD_PC\Desktop\MY_OOP_PRJ_CLH\bin\Debug\net8.0\MY_OOP_PRJ_CLH.deps.json
+C:\Users\THINKPAD_PC\Desktop\MY_OOP_PRJ_CLH\bin\Debug\net8.0\MY_OOP_PRJ_CLH.runtimeconfig.json
+C:\Users\THINKPAD_PC\Desktop\MY_OOP_PRJ_CLH\bin\Debug\net8.0\MY_OOP_PRJ_CLH.dll
+C:\Users\THINKPAD_PC\Desktop\MY_OOP_PRJ_CLH\bin\Debug\net8.0\MY_OOP_PRJ_CLH.pdb
+C:\Users\THINKPAD_PC\Desktop\MY_OOP_PRJ_CLH\obj\Debug\net8.0\MY_OOP_PRJ_CLH.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\THINKPAD_PC\Desktop\MY_OOP_PRJ_CLH\obj\Debug\net8.0\MY_OOP_PRJ_CLH.AssemblyInfoInputs.cache
+C:\Users\THINKPAD_PC\Desktop\MY_OOP_PRJ_CLH\obj\Debug\net8.0\MY_OOP_PRJ_CLH.AssemblyInfo.cs
+C:\Users\THINKPAD_PC\Desktop\MY_OOP_PRJ_CLH\obj\Debug\net8.0\MY_OOP_PRJ_CLH.csproj.CoreCompileInputs.cache
+C:\Users\THINKPAD_PC\Desktop\MY_OOP_PRJ_CLH\obj\Debug\net8.0\MY_OOP_PRJ_CLH.dll
+C:\Users\THINKPAD_PC\Desktop\MY_OOP_PRJ_CLH\obj\Debug\net8.0\refint\MY_OOP_PRJ_CLH.dll
+C:\Users\THINKPAD_PC\Desktop\MY_OOP_PRJ_CLH\obj\Debug\net8.0\MY_OOP_PRJ_CLH.pdb
+C:\Users\THINKPAD_PC\Desktop\MY_OOP_PRJ_CLH\obj\Debug\net8.0\MY_OOP_PRJ_CLH.genruntimeconfig.cache
+C:\Users\THINKPAD_PC\Desktop\MY_OOP_PRJ_CLH\obj\Debug\net8.0\ref\MY_OOP_PRJ_CLH.dll
