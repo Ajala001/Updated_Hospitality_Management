@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MY_OOP_PRJ_CLH")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28d052c31d2d91975313105388b911438c738683")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f769d81442a3811a1c5518b316405ccf524f4480")]
 [assembly: System.Reflection.AssemblyProductAttribute("MY_OOP_PRJ_CLH")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MY_OOP_PRJ_CLH")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
