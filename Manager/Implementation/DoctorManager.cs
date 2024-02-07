@@ -13,7 +13,14 @@ class DoctorManager : IDoctorManager
 
     static bool IsDoctorInList(Doctor doctor)
     {
-        foreach (var doctorItem in doctors)
+        var listOfBookedDoctors = DoctorManager.ListOfBookedDoctors();
+        var listOfAvailableDoctors = DoctorManager.AvailableDoctors();
+
+        List<Doctor> allDoctors = new List<Doctor>();
+        allDoctors.AddRange(listOfBookedDoctors);
+        allDoctors.AddRange(listOfAvailableDoctors);
+
+        foreach (var doctorItem in allDoctors)
         {
             if (doctorItem.Gmail == doctor.Gmail)
             {
@@ -139,9 +146,16 @@ class DoctorManager : IDoctorManager
 
     public static Doctor GetDoctorByID(string doctorID)
     {
-        if (doctors != null)
+        var listOfBookedDoctors = DoctorManager.ListOfBookedDoctors();
+        var listOfAvailableDoctors = DoctorManager.AvailableDoctors();
+
+        List<Doctor> allDoctors = new List<Doctor>();
+        allDoctors.AddRange(listOfBookedDoctors);
+        allDoctors.AddRange(listOfAvailableDoctors);
+
+        if (allDoctors != null)
         {
-            foreach (var doctorItem in doctors)
+            foreach (var doctorItem in allDoctors)
             {
                 if (doctorItem.DoctorID == doctorID)
                 {
@@ -186,7 +200,7 @@ class DoctorManager : IDoctorManager
 
     public void ViewDoctorWithinUrDept()
     {
-        Console.Write("Enter Your Id: ");
+        Console.Write("Enter Your ID: ");
         string docId = Console.ReadLine();
 
         if (docId != Doctor.LoggedInDoctor)
@@ -196,15 +210,15 @@ class DoctorManager : IDoctorManager
         }
 
         var doctor = GetDoctorByID(Doctor.LoggedInDoctor);
-        var listOfDepartment = DepartmentManager.ListOfDepartment();
-        var dept = listOfDepartment.Find(dept => dept.DepartmentName == doctor.DoctorFieldOfSpecialization);
+        var listOfDepartments = DepartmentManager.ListOfDepartment();
+        var dept = listOfDepartments.Find(department => department.DepartmentName == doctor.DoctorFieldOfSpecialization);
 
         if (dept != null)
         {
             Console.WriteLine($"Doctors in {dept.DepartmentName} Department:");
             foreach (var doctorItem in dept.DoctorsWithinTheDept)
             {
-                Console.WriteLine($"Name: {doctor.FirstName} {doctor.LastName}\nSpecialization: {doctor.DoctorFieldOfSpecialization}\nDoctor Status: {doctor.DoctorStatus}\nDoc ID: {doctor.DoctorID}");
+                Console.WriteLine($"Name: {doctorItem.FirstName} {doctorItem.LastName}\nSpecialization: {doctorItem.DoctorFieldOfSpecialization}\nDoctor Status: {doctorItem.DoctorStatus}\nDoc ID: {doctorItem.DoctorID}");
                 Console.WriteLine();
             }
         }
@@ -213,6 +227,7 @@ class DoctorManager : IDoctorManager
             Console.WriteLine($"Department '{doctor.DoctorFieldOfSpecialization}' not found.");
         }
     }
+
 
     public void ViewListOfDocInOtherDept()
     {

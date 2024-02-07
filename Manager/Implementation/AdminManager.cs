@@ -243,7 +243,8 @@ class AdminManager : IAdminManager
                 {
                     foreach (var reports in Doctor.DoctorsReport)
                     {
-                        Console.WriteLine($"Patient's FirstName:{reports.Key.FirstName}\nPatient's Complain{reports.Value}");
+                        Console.WriteLine($"{reports.Key.FirstName} Was diagonised with {reports.Value} and was taking care of.");
+                        Console.WriteLine();
                     }
                     break;
                 }
@@ -328,6 +329,7 @@ class AdminManager : IAdminManager
             foreach (var doctor in foundDept.DoctorsWithinTheDept)
             {
                 Console.WriteLine($"Name: {doctor.FirstName} {doctor.LastName}\nSpecialization: {doctor.DoctorFieldOfSpecialization}\nDoctor Status: {doctor.DoctorStatus}\nDoc ID: {doctor.DoctorID}");
+                Console.WriteLine();
             }
         }
         else
