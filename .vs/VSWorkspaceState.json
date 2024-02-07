@@ -1,9 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Manager",
+    "\\bin",
     "\\Manager\\Implementation"
   ],
-  "SelectedNode": "\\Manager\\Implementation\\DoctorManager.cs",
   "PreviewInSolutionExplorer": false
 }

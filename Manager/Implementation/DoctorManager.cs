@@ -239,16 +239,21 @@ class DoctorManager : IDoctorManager
 
         if (foundDept != null)
         {
-            Console.WriteLine($"Doctors in {foundDept.DepartmentName} Department:");
-            foreach (var doctor in foundDept.DoctorsWithinTheDept)
+            if (foundDept.DoctorsWithinTheDept != null && foundDept.DoctorsWithinTheDept.Count > 0)
             {
-                Console.WriteLine($"Name: {doctor.FirstName} {doctor.LastName}\nSpecialization: {doctor.DoctorFieldOfSpecialization}\nDoctor Status: {doctor.DoctorStatus}\nDoc ID: {doctor.DoctorID}");
+                Console.WriteLine($"Doctors in {foundDept.DepartmentName} Department:");
+                foreach (var doctor in foundDept.DoctorsWithinTheDept)
+                {
+                    Console.WriteLine($"Name: {doctor.FirstName} {doctor.LastName}\nSpecialization: {doctor.DoctorFieldOfSpecialization}\nDoctor Status: {doctor.DoctorStatus}\nDoc ID: {doctor.DoctorID}");
+                }
+            }else
+            {
+                Console.WriteLine($"No Doctors Yet in {foundDept}");
             }
         }
         else
         {
             Console.WriteLine($"Department '{deptName}' not found.");
         }
-
     }
 }
